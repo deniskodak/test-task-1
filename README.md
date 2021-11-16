@@ -1,1 +1,1 @@
-# test-task-1
+Репозиторий по 10 модулю JavaScript
