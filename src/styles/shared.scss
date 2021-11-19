@@ -1,0 +1,15 @@
+%link {
+    text-decoration: none;
+    color: $primary-color;
+    display: inline-block;
+    border-bottom: 1px solid $primary-color;
+    cursor: pointer;
+}
+
+%text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: $checkbox;
+}

@@ -1,0 +1,151 @@
+.select {
+    position: relative;
+    width: 100%;
+
+    padding: 22px 0px 11px 50px;
+
+    background: $input-rgba;
+    border: 1px solid $primary-white;
+    border-radius: 5px;
+
+    box-shadow: 0px 4px 15px $input-rgba;
+
+    outline: none;
+
+    transition: border-color 300ms $timing-function;
+    overflow: hidden;
+
+    &:hover,
+    &:focus {
+        border-color: $primary-color;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        width: 24px;
+        height: 24px;
+        background: url('../assets/icons/dropDown.svg') no-repeat;
+        background-position: center;
+    }
+}
+
+.select-input {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 1.21;
+    color: $checkbox;
+
+    &.visited~.signup-label {
+        font-size: 11px;
+        line-height: 1.16;
+        color: $primary-color;
+        top: 11px;
+        transform: translateY(0);
+    }
+}
+
+
+.select__header {
+    height: 23px;
+}
+
+.select__current {
+    position: relative;
+    z-index: 125;
+
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 1.21;
+    color: $checkbox;
+}
+
+.select__body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 105%;
+
+    padding: 18px 0 21px 16px;
+    height: 159px;
+
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+
+    background-color: $primary-white;
+    box-shadow: 0px 4px 15px $select-shadow;
+
+    transition: transform 300ms $timing-function, opacity 300ms $timing-function;
+    transform-origin: top;
+    transform: scaleY(0);
+
+    z-index: 120;
+
+    &::-webkit-scrollbar {
+        visibility: hidden;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        visibility: hidden;
+    }
+}
+
+.select__item {
+    padding: 5px 0 5px 0;
+
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.2;
+    color: $select-default;
+
+    background: transparent;
+
+    list-style: none;
+
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+.select__item:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.select__item:hover,
+.select__item:focus {
+    padding-left: 9px;
+    color: $select-active;
+}
+
+.select.is-active {
+    overflow: visible;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &~.signup-label {
+        font-size: 11px;
+        line-height: 1.16;
+        color: $primary-color;
+        top: 11px;
+        transform: translateY(0);
+    }
+}
+
+.select.is-active .select__body {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+}

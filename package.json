@@ -54,6 +54,8 @@
     "chokidar": "^3.5.2",
     "core-js": "^3.6.5",
     "handlebars": "^4.7.6",
-    "sass": "^1.43.4"
+    "jquery": "^3.6.0",
+    "sass": "^1.43.4",
+    "scroll-out": "^2.2.12"
   }
 }

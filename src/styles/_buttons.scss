@@ -1,0 +1,52 @@
+.btn-primary {
+    display: block;
+    width: 100%;
+
+    font-weight: 600;
+    color: $primary-color;
+    text-decoration: none;
+
+    background: transparent;
+
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+    outline: none;
+
+    transition: background 300ms $timing-function, color 300ms $timing-function;
+
+    @media screen and (min-width: 360px) and (max-width: 575px) {
+        padding: 13px 0 12px 0;
+        font-size: 16px;
+        line-height: 1.18;
+    }
+
+    @media screen and (min-width: 576px) {
+        max-width: 214px;
+        padding: 16px 0;
+        font-size: 19px;
+        line-height: 1.21;
+    }
+
+    &:focus,
+    &:hover {
+        border: 2px solid $primary-color;
+        background: $primary-color;
+        color: $primary-black;
+    }
+
+    &.reversed {
+        background: $primary-color;
+        color: $primary-black;
+
+        &:hover,
+        &:focus {
+            border: 2px solid $primary-color;
+            background: transparent;
+            color: $primary-color;
+        }
+
+        @media screen and(min-width: 576px) {
+            max-width: 171px;
+        }
+    }
+}

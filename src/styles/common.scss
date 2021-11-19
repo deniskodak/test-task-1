@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "Rubik";
+    src: url("../assets/fonts/Rubik-Light.ttf") format("truetype"),
+        url("../assets/fonts/Rubik-Medium.ttf") format("truetype");
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Rubik', serif;
+    transition: color 300ms var(--timing-function),
+        background-color 300ms var(--timing-function);
+    letter-spacing: 0.04em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1,
+h2,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.margin-hero-b {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 576px) {
+        margin-bottom: 40px;
+    }
+}
+
+.signup-title-mb {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 576px) {
+        margin-bottom: 40px;
+    }
+}
