@@ -6,12 +6,12 @@
         padding-bottom: 56px;
     }
 
-    &.parallax {
+    &::after {
         background-image: url('../assets/bg-forms/section_2-svg_1.svg'),
             url('../assets/bg-forms/section_2-svg_2.svg'),
-            url('../assets/bg-forms/section_2-svg_3.svg'), url('../assets/img-bgs/bg-2.jpg');
-        background-attachment: fixed;
-        background-repeat: no-repeat;
+            url('../assets/bg-forms/section_2-svg_3.svg'),
+            url('../assets/img-bgs/bg-2.jpg');
+
 
         @media screen and (min-width: 360px) and (max-width: 575px) {
             background-position: top 114px left -17px,
